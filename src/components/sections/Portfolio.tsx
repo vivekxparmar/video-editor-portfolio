@@ -21,7 +21,7 @@ export function Portfolio() {
         <Reveal className="mb-16">
           <div className="flex items-baseline gap-4 mb-6">
             <span className="text-[11px] tracking-[0.35em] text-gold uppercase">
-              03
+              02
             </span>
             <div className="h-px flex-1 bg-foreground/10" />
             <span className="text-[11px] tracking-[0.35em] text-foreground/40 uppercase">

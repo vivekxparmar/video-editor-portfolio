@@ -50,7 +50,7 @@ export function Skills() {
         <Reveal className="mb-20">
           <div className="flex items-baseline gap-4 mb-6">
             <span className="text-[11px] tracking-[0.35em] text-gold uppercase">
-              02
+              03
             </span>
             <div className="h-px flex-1 bg-foreground/10" />
             <span className="text-[11px] tracking-[0.35em] text-foreground/40 uppercase">

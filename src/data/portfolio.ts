@@ -16,8 +16,8 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   },
   {
     id: "reel-2",
-    title: "Motion Graphics",
-    category: "Google Gemini Intro",
+    title: "Google Gemini Concept Ad",
+    category: "Motion Graphics",
     youtubeId: "beHWU2H5zbE",
     aspectRatio: "16/9",
   },
@@ -30,7 +30,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   },
   {
     id: "reel-4",
-    title: "Apple Liquid UI",
+    title: "Classic Liquid Glass UI",
     category: "Motion Graphics",
     youtubeId: "gcBtFEs5bQE",
     aspectRatio: "16/9",
