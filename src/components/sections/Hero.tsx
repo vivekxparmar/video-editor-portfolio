@@ -135,7 +135,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative sm:min-h-screen flex flex-col justify-start pt-32 sm:pt-28 md:pt-16 pb-16 px-6 overflow-hidden"
+      className="relative sm:min-h-screen flex flex-col justify-start pt-32 sm:pt-28 md:pt-16 pb-16 md:pb-0 px-6 overflow-hidden"
     >
       <div className="relative mx-auto max-w-5xl w-full grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 items-center">
         {/* ─── LEFT: text content ─── */}
