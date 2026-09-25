@@ -56,4 +56,11 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     youtubeId: "QL9fFgZRWG4",
     aspectRatio: "9/16",
   },
+  {
+    id: "reel-8",
+    title: "AI Generated Ad",
+    category: "AI tools",
+    youtubeId: "88u7nu0tReE",
+    aspectRatio: "9/16",
+  },
 ];
