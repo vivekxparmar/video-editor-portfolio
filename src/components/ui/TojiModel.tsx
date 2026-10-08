@@ -1,10 +1,9 @@
 "use client";
 
-import { useRef, useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export function TojiModel() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const imgRef = useRef<HTMLDivElement>(null);
+  const motionRef = useRef<HTMLDivElement>(null);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -13,103 +12,112 @@ export function TojiModel() {
 
   useEffect(() => {
     if (!mounted) return;
-    const container = containerRef.current;
-    const img = imgRef.current;
-    if (!container || !img) return;
 
-    let rafId: number;
-    let targetX = 0;
-    let targetY = 0;
-    let currentX = 0;
-    let currentY = 0;
+    const motionLayer = motionRef.current;
+    if (!motionLayer) return;
 
-    const handleMouseMove = (e: MouseEvent) => {
-      const rect = container.getBoundingClientRect();
-      const centerX = rect.left + rect.width / 2;
-      const centerY = rect.top + rect.height / 2;
+    let rafId = 0;
+    const startTime = performance.now();
 
-      targetX = (e.clientX - centerX) / rect.width;
-      targetY = (e.clientY - centerY) / rect.height;
-    };
+    const animate = (time: number) => {
+      const elapsed = (time - startTime) / 1000;
 
-    const handleScroll = () => {
-      if (!img) return;
-      const rect = container.getBoundingClientRect();
-      const scrollProgress = 1 - rect.top / window.innerHeight;
-      const clampedProgress = Math.max(0, Math.min(1, scrollProgress));
-      img.style.setProperty("--scroll-y", `${clampedProgress * 40}px`);
-    };
+      // Very subtle idle movement
+      const x = Math.sin(elapsed * 0.5) * 1;
+      const y = Math.sin(elapsed * 0.35) * 0.7;
 
-    const animate = () => {
-      currentX += (targetX - currentX) * 0.08;
-      currentY += (targetY - currentY) * 0.08;
+      motionLayer.style.transform = `
+        translate3d(${x}px, ${y}px, 0)
+      `;
 
-      if (img) {
-        const rotateY = currentX * 18;
-        const rotateX = -currentY * 12;
-        const translateX = currentX * 12;
-        const translateY = currentY * 8;
-
-        img.style.transform = `
-          perspective(1200px)
-          rotateY(${rotateY}deg)
-          rotateX(${rotateX}deg)
-          translate3d(${translateX}px, ${translateY}px, 0)
-        `;
-      }
       rafId = requestAnimationFrame(animate);
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("scroll", handleScroll, { passive: true });
     rafId = requestAnimationFrame(animate);
-    handleScroll();
 
     return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("scroll", handleScroll);
       cancelAnimationFrame(rafId);
     };
   }, [mounted]);
 
   return (
-    <div
-      ref={containerRef}
-      className="relative w-full h-full flex items-start justify-center select-none pointer-events-none"
-      style={{ perspective: "1200px" }}
-    >
-      {/* ambient glow behind Toji */}
+    <div className="relative w-full h-full pointer-events-none select-none">
+      {/* Ambient glow */}
       <div
-        className="absolute bottom-[10%] left-1/2 -translate-x-1/2 w-[70%] h-[70%] rounded-full blur-[120px] opacity-40"
+        className="
+          absolute
+          left-1/2
+          top-1/2
+          -translate-x-1/2
+          -translate-y-1/2
+          w-[75%]
+          h-[65%]
+          rounded-full
+          blur-[110px]
+          opacity-40
+        "
         style={{
           background:
-            "radial-gradient(circle, rgba(212,175,55,0.4) 0%, rgba(139,92,246,0.25) 40%, transparent 70%)",
+            "radial-gradient(circle, rgba(212,175,55,0.4) 0%, rgba(139,92,246,0.22) 40%, transparent 72%)",
         }}
       />
 
-      {/* the toji figure */}
+      {/* Animation wrapper */}
       <div
-        ref={imgRef}
-        className="relative w-full h-full flex items-start justify-center"
+        ref={motionRef}
+        className="absolute inset-0"
         style={{
-          transformStyle: "preserve-3d",
           willChange: "transform",
-          transform: "translateY(var(--scroll-y, 0))",
-          transition: "transform 0.1s linear",
         }}
       >
+        {/* ================= GOJO ================= */}
         <img
-          src="/toji.png"
-          alt="Toji Fushiguro"
-          className="w-auto h-full max-h-[85vh] object-contain object-top"
+          src="/gojo_satoru.png"
+          alt="Gojo Satoru"
+          draggable={false}
+          className="absolute block"
           style={{
+            width: "700px",
+            height: "auto",
+            maxWidth: "none",
+            maxHeight: "none",
+
+            // Gojo position
+            left: "70%",
+            top: "0",
+
+            transform: "translateX(-50%)",
+
             filter:
               "drop-shadow(0 0 40px rgba(212,175,55,0.15)) drop-shadow(0 20px 40px rgba(0,0,0,0.4))",
           }}
         />
+
+        {/* ================= TOJI ================= */}
+        <img
+          src="/toji.png"
+          alt="Toji Fushiguro"
+          draggable={false}
+          className="absolute block"
+          style={{
+            width: "530px",
+            height: "auto",
+            maxWidth: "none",
+            maxHeight: "none",
+
+            // Toji position
+            right: "-25%",
+            bottom: "0px",
+
+            transform: "translateX(-50%)",
+
+            filter:
+              "drop-shadow(0 0 35px rgba(212,175,55,0.12)) drop-shadow(0 20px 40px rgba(0,0,0,0.35))",
+          }}
+        />
       </div>
 
-      {/* floating particles around Toji */}
+      {/* Floating particles */}
       <div className="absolute inset-0 pointer-events-none">
         {[...Array(6)].map((_, i) => (
           <div
