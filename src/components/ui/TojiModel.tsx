@@ -95,7 +95,7 @@ export function TojiModel() {
 
         {/* ================= TOJI ================= */}
         <img
-          src="/toji.png"
+          src="/toji_fushiguro.png"
           alt="Toji Fushiguro"
           draggable={false}
           className="absolute block"
