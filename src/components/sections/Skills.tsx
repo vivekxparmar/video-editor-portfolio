@@ -45,7 +45,7 @@ const TOOLS = [
 export function Skills() {
   return (
     <section id="skills" className="relative py-12 px-6">
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-6xl px-6">
         {/* header — left aligned, editorial */}
         <Reveal className="mb-20">
           <div className="flex items-baseline gap-4 mb-6">

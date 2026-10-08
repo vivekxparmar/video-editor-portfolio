@@ -22,7 +22,7 @@ const TIMELINE = [
 export function About() {
   return (
     <section id="about" className="relative py-0 sm:py-5 md:py-12 px-6">
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-6xl px-6">
         {/* header — editorial */}
         <Reveal className="mb-20">
           <div className="flex items-baseline gap-4 mb-6">
