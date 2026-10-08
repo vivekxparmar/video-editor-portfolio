@@ -39,7 +39,7 @@ export function Services() {
               Services
             </span>
           </div>
-          <h2 className="font-[Playfair_Display] text-5xl sm:text-6xl font-bold text-foreground leading-[1.05] max-w-2xl">
+          <h2 className="font-[Anta] text-5xl sm:text-6xl font-bold text-foreground leading-[1.05] max-w-2xl">
             What I can do for you.
           </h2>
           <p className="mt-6 max-w-lg text-foreground/55 text-lg leading-relaxed">
@@ -57,7 +57,7 @@ export function Services() {
                 <div className="group grid grid-cols-[auto_1fr] md:grid-cols-[auto_1fr_2fr] gap-6 md:gap-10 py-8 border-b border-foreground/10">
                   {/* number + icon */}
                   <div className="flex flex-col items-center gap-3 pt-1">
-                    <span className="font-[Playfair_Display] text-xs text-foreground/30 tabular-nums group-hover:text-gold transition-colors duration-300">
+                    <span className="font-[Anta] text-xs text-foreground/30 tabular-nums group-hover:text-gold transition-colors duration-300">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <Icon
@@ -67,7 +67,7 @@ export function Services() {
                   </div>
 
                   {/* title */}
-                  <h3 className="font-[Playfair_Display] text-xl sm:text-2xl font-bold text-foreground leading-snug group-hover:translate-x-1 transition-transform duration-300">
+                  <h3 className="font-[Anta] text-xl sm:text-2xl font-bold text-foreground leading-snug group-hover:translate-x-1 transition-transform duration-300">
                     {service.title}
                   </h3>
 

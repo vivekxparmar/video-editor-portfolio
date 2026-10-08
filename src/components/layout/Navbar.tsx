@@ -132,7 +132,7 @@ export function Navbar() {
             e.preventDefault();
             handleNavClick("#home");
           }}
-          className="group relative z-10 font-[Playfair_Display] text-xl font-bold tracking-wide text-foreground md:text-2xl"
+          className="group relative z-10 font-[Anta] text-xl font-bold tracking-wide text-foreground md:text-2xl"
         >
           Vivek
           <span className="text-gold transition-none">.</span>
@@ -145,7 +145,7 @@ export function Navbar() {
                 type="button"
                 onClick={() => handleNavClick(link.href)}
                 className={cn(
-                  "relative text-sm font-medium",
+                  "relative text-sm font-medium tracking-wider",
                   "text-muted-foreground",
                   "hover:text-foreground",
                   "transition-none",

@@ -30,7 +30,7 @@ export function Portfolio() {
           </div>
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
             <div>
-              <h2 className="font-[Playfair_Display] text-5xl sm:text-6xl font-bold text-foreground leading-[1.05] max-w-2xl">
+              <h2 className="font-[Anta] text-5xl sm:text-6xl font-bold text-foreground leading-[1.05] max-w-2xl">
                 Selected work.
               </h2>
               <p className="mt-6 max-w-lg text-foreground/55 text-lg leading-relaxed">
@@ -39,7 +39,7 @@ export function Portfolio() {
               </p>
             </div>
             {/* counter */}
-            <div className="font-[Playfair_Display] text-xs tracking-[0.35em] text-foreground/40 tabular-nums shrink-0">
+            <div className="font-[Anta] text-xs tracking-[0.35em] text-foreground/40 tabular-nums shrink-0">
               <span className="text-gold">
                 {String(index + 1).padStart(2, "0")}
               </span>
@@ -64,7 +64,7 @@ export function Portfolio() {
             <span className="text-[11px] tracking-[0.35em] text-foreground/40 uppercase">
               {current.category}
             </span>
-            <h3 className="mt-3 font-[Playfair_Display] text-2xl sm:text-3xl font-bold text-foreground truncate">
+            <h3 className="mt-3 font-[Anta] text-2xl sm:text-3xl font-bold text-foreground truncate">
               {current.title}
             </h3>
           </div>

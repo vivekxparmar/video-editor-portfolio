@@ -57,7 +57,7 @@ export function Skills() {
               Expertise
             </span>
           </div>
-          <h2 className="font-[Playfair_Display] text-5xl sm:text-6xl font-bold text-foreground leading-[1.05] max-w-2xl">
+          <h2 className="font-[Anta] text-5xl sm:text-6xl font-bold text-foreground leading-[1.05] max-w-2xl">
             Styles I master.
           </h2>
           <p className="mt-6 max-w-lg text-foreground/55 text-lg leading-relaxed">
@@ -73,7 +73,7 @@ export function Skills() {
             return (
               <Reveal key={i} delay={(i % 2) * 0.04}>
                 <div className="group flex items-center gap-4 py-5 border-b border-foreground/10 transition-colors duration-300">
-                  <span className="font-[Playfair_Display] text-xs text-foreground/30 w-6 tabular-nums group-hover:text-gold transition-colors duration-300">
+                  <span className="font-[Anta] text-xs text-foreground/30 w-6 tabular-nums group-hover:text-gold transition-colors duration-300">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <Icon
@@ -101,7 +101,7 @@ export function Skills() {
             {TOOLS.map((tool, i) => (
               <span
                 key={i}
-                className="font-[Playfair_Display] text-xl sm:text-2xl text-foreground/70 hover:text-gold transition-colors duration-300 cursor-default"
+                className="font-[Anta] text-xl sm:text-2xl text-foreground/70 hover:text-gold transition-colors duration-300 cursor-default"
               >
                 {tool}
               </span>

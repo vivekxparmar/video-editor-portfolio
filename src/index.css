@@ -1,6 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Aldrich&display=swap");
 @import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
+
+.aldrich {
+  font-family: "Aldrich", sans-serif;
+}
 
 :root {
   --radius: 1rem;
@@ -90,6 +95,7 @@ body {
   font-feature-settings:
     "rlig" 1,
     "calt" 1;
+  font-family: "Sulphur Point", sans-serif;
 }
 
 @keyframes slide {

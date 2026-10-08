@@ -39,7 +39,7 @@ export function Hero() {
             initial="hidden"
             animate="visible"
             variants={{ visible: { transition: { staggerChildren: 0.06 } } }}
-            className="font-[Playfair_Display] font-bold leading-[0.95] text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-foreground"
+            className="font-[Anta] font-bold leading-[0.95] text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-foreground"
           >
             {NAME.map((word, wi) => (
               <span key={wi} className="block">
@@ -80,7 +80,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="mt-6 font-[Playfair_Display] italic text-2xl sm:text-3xl text-foreground/60"
+            className="mt-6 font-[Anta] italic text-2xl sm:text-3xl text-foreground/60"
           >
             Video editor &amp; visual storyteller
           </motion.p>

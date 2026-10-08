@@ -61,7 +61,7 @@ export function Contact() {
               Contact
             </span>
           </div>
-          <h2 className="font-[Playfair_Display] text-5xl sm:text-6xl font-bold text-foreground leading-[1.05] max-w-2xl">
+          <h2 className="font-[Anta] text-5xl sm:text-6xl font-bold text-foreground leading-[1.05] max-w-2xl">
             Let's create something great.
           </h2>
           <p className="mt-6 max-w-lg text-foreground/55 text-lg leading-relaxed">
@@ -79,7 +79,7 @@ export function Contact() {
               <>
                 {/* number + icon */}
                 <div className="flex flex-col items-center gap-3 shrink-0">
-                  <span className="font-[Playfair_Display] text-xs text-foreground/30 tabular-nums group-hover:text-gold transition-colors duration-300">
+                  <span className="font-[Anta] text-xs text-foreground/30 tabular-nums group-hover:text-gold transition-colors duration-300">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <Icon
@@ -93,7 +93,7 @@ export function Contact() {
                   <span className="text-[11px] tracking-[0.35em] text-foreground/40 uppercase">
                     {channel.label}
                   </span>
-                  <p className="mt-2 font-[Playfair_Display] text-lg sm:text-2xl font-bold text-foreground truncate group-hover:translate-x-1 transition-transform duration-300">
+                  <p className="mt-2 font-[Anta] text-lg sm:text-2xl font-bold text-foreground truncate group-hover:translate-x-1 transition-transform duration-300">
                     {channel.value}
                   </p>
                 </div>

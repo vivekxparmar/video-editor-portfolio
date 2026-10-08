@@ -34,7 +34,7 @@ export function About() {
               About
             </span>
           </div>
-          <h2 className="font-[Playfair_Display] text-5xl sm:text-6xl font-bold text-foreground leading-[1.05] max-w-2xl">
+          <h2 className="font-[Anta] text-5xl sm:text-6xl font-bold text-foreground leading-[1.05] max-w-2xl">
             The person behind the edit.
           </h2>
         </Reveal>
@@ -69,7 +69,7 @@ export function About() {
                   <div className="group grid grid-cols-[auto_1fr] gap-6 py-7 border-b border-foreground/10">
                     {/* number + icon column */}
                     <div className="flex flex-col items-center gap-3 pt-1">
-                      <span className="font-[Playfair_Display] text-xs text-foreground/30 tabular-nums group-hover:text-gold transition-colors duration-300">
+                      <span className="font-[Anta] text-xs text-foreground/30 tabular-nums group-hover:text-gold transition-colors duration-300">
                         {String(i + 1).padStart(2, "0")}
                       </span>
                       <GraduationCap
@@ -83,7 +83,7 @@ export function About() {
                       <span className="text-[11px] tracking-[0.35em] text-foreground/40 uppercase">
                         {item.year}
                       </span>
-                      <h3 className="mt-2 font-[Playfair_Display] text-xl font-bold text-foreground">
+                      <h3 className="mt-2 font-[Anta] text-xl font-bold text-foreground">
                         {item.title}
                       </h3>
                       <p className="mt-2 text-sm text-foreground/60 leading-relaxed max-w-md">
