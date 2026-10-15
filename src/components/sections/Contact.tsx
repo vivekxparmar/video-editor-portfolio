@@ -49,7 +49,7 @@ export function Contact() {
 
   return (
     <section id="contact" className="relative py-12 px-6">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl sm:px-6 px-0">
         {/* header — editorial */}
         <Reveal className="mb-20">
           <div className="flex items-baseline gap-4 mb-6">

@@ -14,7 +14,7 @@ export function Hero() {
       id="home"
       className="relative sm:min-h-screen flex flex-col justify-start pt-32 sm:pt-28 md:pt-16 pb-16 md:pb-0 px-6 overflow-hidden"
     >
-      <div className="relative mx-auto max-w-6xl w-full grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 items-center px-6">
+      <div className="relative mx-auto max-w-6xl w-full grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 items-center sm:px-6 px-0">
         {/* ─── LEFT: text content ─── */}
         <div className="relative z-10">
           {/* top meta line */}
