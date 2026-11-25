@@ -7,6 +7,12 @@ export interface GraphicItem {
 
 export const GRAPHIC_ITEMS: GraphicItem[] = [
   {
+    id: "g0",
+    title: "0",
+    category: "Graphic",
+    src: "https://res.cloudinary.com/dwhnygv37/image/upload/v1795608114/Ray-Ban_Meta_Wayfarer_Promotional_Poster_vfu2ta.png",
+  },
+  {
     id: "g1",
     title: "1",
     category: "Graphic",
