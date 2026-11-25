@@ -24,6 +24,8 @@ dist-ssr
 *.sw?
 
 # Large media files
+public/graphics/
+public/images/
 public/videos/
 *.mp4
 *.mov
